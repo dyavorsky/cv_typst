@@ -132,7 +132,7 @@ to adjust appearance; change the value in the template instead. See CLAUDE.md,
 )
 
 #resume-item[
-  - Performed marketing analytics to support strategic management consulting engagements, including conjoint analysis, maximum-difference scaling, customer segmentation, perceptual mapping, factor analysis, and other statistical and econometric analyses.
+  - Performed marketing analytics to support strategic management consulting engagements, including conjoint analysis, maximum-difference scaling, customer segmentation, perceptual mapping, factor analysis, structural equation modeling, and other statistical and econometric analyses.
   - Engineered ecosystem of statistical and machine learning models to enable media conglomerate to value content on its streaming platforms and optimize media licensing decisions.
 ]
 
