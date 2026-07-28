@@ -1,0 +1,168 @@
+---
+title: "Dan Yavorsky's Resume"
+format:
+  typst:
+    output-file: resume.pdf
+    template-partials:
+      - typst-template.typ
+      - typst-show.typ
+      - page.typ
+    keep-typ: true
+---
+
+<!--
+This file is content only. All styling — body text size, leading, heading and name
+sizes, section icons, sidebar geometry, and the entry helpers used below — lives in
+modern-cv/lib.typ, marked `LOCAL EDIT`. Do not add `#set` rules or show rules here
+to adjust appearance; change the value in the template instead. See CLAUDE.md,
+"Where style edits go".
+-->
+
+```{=typst}
+// ---- Right sidebar --------------------------------------------------------
+// Content for the gray band. `sidebar-section` registers each block with the
+// template, which renders them in call order beneath the contact details.
+//
+// These calls emit no layout of their own, so their position in this file does
+// not affect the main column — they sit at the top because that is the reading
+// order of the finished page. Headings, icons, and spacing are all decided by
+// `sidebar-heading` in modern-cv/lib.typ; pass only the title and the body.
+
+#sidebar-section("Education")[
+  #sidebar-edu-entry("PhD, Quantitative Marketing", "UCLA Anderson", "2020")
+  #sidebar-edu-entry("MBA, Management", "UCLA Anderson", "2014")
+  #sidebar-edu-entry("CFA Charterholder (inactive)", "CFA Institute", "2012")
+  #sidebar-edu-entry("BA, Economics & Mathematics", "Claremont McKenna College", "2006")
+]
+
+// `sidebar-stacked-list`, not `sidebar-skill-list`: the latter comma-joins its
+// values, which runs titles together illegibly at this width. Each item is
+// content, so the whole title doubles as its own link.
+#sidebar-section("Publications")[
+  #sidebar-stacked-list(categories-with-values: (
+    "Author": (
+      link("https://link.springer.com/content/pdf/10.1007/s11129-020-09229-4.pdf")[
+        Consumer Search in the US Auto Industry (QME, 2020)
+      ],
+      link("https://dyavorsky.github.io/likert_dualresponse/")[
+        Ordinal Dual Response in Choice-Based Conjoint (article, in progress)
+      ],
+      link("http://dcme-r.danyavorsky.com/")[
+        Discrete Choice Model Estimation with R (book, in progress)
+      ],
+    ),
+    // Research assistance and package contributions — not authored work. The
+    // "Contributor" label is what keeps that distinction honest, so it should not
+    // be merged into "Co-author" above.
+    "Contributor": (
+      link("https://www.journals.uchicago.edu/doi/10.1086/702171")[
+        Chen, Chevalier, Rossi & Oehlsen, The Value of Flexible Work (JPE, 2019)
+      ],
+      link("https://link.springer.com/article/10.1007/s11129-024-09291-2")[
+        Ursu, Seiler & Honka, The Sequential Search Model (QME, 2024)
+      ],
+      link("https://cran.r-project.org/package=bayesm")[
+        bayesm R package — posterior samplers, vignettes, documentation
+      ],
+    ),
+  ))
+]
+
+#sidebar-section("Skills")[
+  #sidebar-skill-list(categories-with-values: (
+    "Methods": (
+      "Statistics",
+      "Econometrics",
+      "Causal Inference",
+      "Bayesian Methods",
+      "Discrete Choice",
+      "Machine Learning",
+    ),
+    "Languages & Tools": (
+      "R",
+      "SQL",
+      "Tableau",
+      "Quarto",
+      "LaTeX",
+    ),
+    "Developing": (
+      "Python",
+      "Julia",
+      "Vim",
+    ),
+    "Interests": (
+      "Applied Econometrics","Quantitative Marketing",
+      "Customer Analytics",
+      "Structural Models of Demand",
+    ),
+  ))
+]
+
+// Two paragraphs, not one: the blank line separates the biographical facts from
+// the hobbies. Spacing comes from the sidebar's own `par(spacing:)`, so this needs
+// no `#v()`.
+#sidebar-section("Personal")[
+  US citizen, married, two children
+
+  Train dogs, cycle, sip bourbon, build mech. keyboards, collect pocket knives, patinate boots, lament ManUnited
+]
+```
+
+# Experience
+
+```{=typst}
+#job-entry(
+  organization: "GBK Collective",
+  date: "2022 – Present",
+  title: "Head of Analytics",
+  location: "Los Angeles, CA",
+)
+
+#resume-item[
+  - Lead the Marketing Science and Analytics function for all client engagements, from proposal to design, data collection, analysis, and reporting. 
+  - Apply econometric, statistical, and machine learning methods to derive consumer insights and inform marketing strategy, often in collaboration with academic experts, including Eric Bradlow (Wharton), Mike Hanssens (UCLA), and Sam Hui (Houston).
+  - Develop and maintain R packages and AI skills to implement and extend core analytic methods: #link("https://github.com/dyavorsky/maxdiff")[`maxdiff`] adapts `bayesm`'s hierarchical Bayesian MNL for varying choice-set sizes; #link("https://github.com/dyavorsky/shapley")[`shapley`] extends R² contribution over all predictor orderings to logit and ordered logit outcomes; #link("https://github.com/dyavorsky/keydrivers")[`keydrivers`] adds bootstrapped confidence intervals across eight complementary importance methods; and #link("https://github.com/dyavorsky/turf")[`turf`] makes exhaustive bundle search tractable via C++ and parallel computation.
+  - Recruited, hired, developed, and manage a junior data scientist; lead firm-wide analytic trainings; and mentor junior consultants and interns.
+]
+
+#job-entry(
+  organization: "Bain & Co.",
+  date: "2020 – 2021",
+  title: "Manager, Advanced Analytics",
+  location: "Los Angeles, CA",
+)
+
+#resume-item[
+  - Performed marketing analytics to support strategic management consulting engagements, including conjoint analysis, maximum-difference scaling, customer segmentation, perceptual mapping, factor analysis, and other statistical and econometric analyses.
+  - Developed ecosystem of statistical and machine learning models to enable media conglomerate to value content on its streaming platforms and optimize media licensing decisions.
+]
+
+
+#job-entry(
+  organization: "Cornerstone Research",
+  date: "2006 – 2014",
+  title: "Analyst, Senior Analyst, Research Associate",
+  location: "San Francisco, CA",
+)
+
+#resume-item[
+  - Performed economic, financial, statistical, and causal impact analyses to support professors engaged as expert witnesses in over 100 commercial litigation matters related to consumer fraud, bankruptcy, forensic accounting, asset pricing, and other matters.
+  - Led substantial internal initiatives including firm-wide analyst training and West Coast analyst recruiting.
+]
+```
+
+# Teaching
+
+```{=typst}
+#job-entry(
+  organization: "UCLA Anderson & UCSD Rady",
+  date: "2021 – Present",
+  title: "Adjunct Professor",
+  location: "Los Angeles & San Diego, CA",
+)
+
+#resume-item[
+  - Developed and teach masters-level (MFE and MSBA) courses in econometrics, R programming, and marketing analytics, as well as undergraduate courses in customer analytics and tools for data science. Slides, syllabi, and student evaluations are available on my #link("https://dyavorsky.github.io/teaching")[`website`].
+]
+```
+

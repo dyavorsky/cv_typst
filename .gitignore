@@ -1,0 +1,10 @@
+# Quarto/Typst build artifacts. resume.typ is the generated intermediate that
+# `keep-typ: true` leaves behind — useful for debugging, not source.
+.quarto/
+resume.typ
+
+# Working notes for Claude Code — local only, not part of the published project.
+CLAUDE.md
+
+.claude/
+.DS_Store
