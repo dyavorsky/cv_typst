@@ -104,7 +104,7 @@ to adjust appearance; change the value in the template instead. See CLAUDE.md,
 #sidebar-section("Personal")[
   US citizen, married, two children
 
-  Train dogs, cycle, sip bourbon, build mech. keyboards, collect pocket knives, patinate boots, lament ManUnited
+  Train dogs, cycle, collect pocket knives, build mechanical keyboards, patinate boots, sip bourbon, lament ManUnited
 ]
 ```
 
@@ -121,8 +121,7 @@ to adjust appearance; change the value in the template instead. See CLAUDE.md,
 #resume-item[
   - Lead the Marketing Science and Analytics function for all client engagements, from proposal to design, data collection, analysis, and reporting. 
   - Apply econometric, statistical, and machine learning methods to derive consumer insights and inform marketing strategy, often in collaboration with academic experts, including Eric Bradlow (Wharton), Mike Hanssens (UCLA), and Sam Hui (Houston).
-  - Develop and maintain R packages and AI skills to implement and extend core analytic methods: #link("https://github.com/dyavorsky/maxdiff")[`maxdiff`] adapts `bayesm`'s hierarchical Bayesian MNL for varying choice-set sizes; #link("https://github.com/dyavorsky/shapley")[`shapley`] extends R² contribution over all predictor orderings to logit and ordered logit outcomes; #link("https://github.com/dyavorsky/keydrivers")[`keydrivers`] adds bootstrapped confidence intervals across eight complementary importance methods; and #link("https://github.com/dyavorsky/turf")[`turf`] makes exhaustive bundle search tractable via C++ and parallel computation.
-  - Recruited, hired, developed, and manage a junior data scientist; lead firm-wide analytic trainings; and mentor junior consultants and interns.
+  - Develop and maintain R packages and AI skills to implement and extend core analytic methods: #link("https://github.com/dyavorsky/maxdiff")[`maxdiff`] adapts `bayesm`'s hierarchical Bayesian MNL for varying choice-set sizes; #link("https://github.com/dyavorsky/shapley")[`shapley`] extends R-squared contribution over all predictor orderings to logit and ordered logit outcomes; #link("https://github.com/dyavorsky/keydrivers")[`keydrivers`] adds bootstrapped confidence intervals across eight complementary importance methods; and #link("https://github.com/dyavorsky/turf")[`turf`] makes exhaustive bundle search tractable via C++ and parallel computation.
 ]
 
 #job-entry(
@@ -134,9 +133,20 @@ to adjust appearance; change the value in the template instead. See CLAUDE.md,
 
 #resume-item[
   - Performed marketing analytics to support strategic management consulting engagements, including conjoint analysis, maximum-difference scaling, customer segmentation, perceptual mapping, factor analysis, and other statistical and econometric analyses.
-  - Developed ecosystem of statistical and machine learning models to enable media conglomerate to value content on its streaming platforms and optimize media licensing decisions.
+  - Engineered ecosystem of statistical and machine learning models to enable media conglomerate to value content on its streaming platforms and optimize media licensing decisions.
 ]
 
+#job-entry(
+  organization: "UCLA Anderson",
+  date: "2015 – 2019",
+  title: "Graduate Student Researcher",
+  location: "Los Angeles, CA",
+)
+
+#resume-item[
+  - Supported Professors Rossi, Chen, and Honka on several research projects.
+  - Maintained and extended Prof. Rossi's `bayesm` R package, which implements Bayesian estimation of common microeconometric models in marketing.
+]
 
 #job-entry(
   organization: "Cornerstone Research",
@@ -162,7 +172,8 @@ to adjust appearance; change the value in the template instead. See CLAUDE.md,
 )
 
 #resume-item[
-  - Developed and teach masters-level (MFE and MSBA) courses in econometrics, R programming, and marketing analytics, as well as undergraduate courses in customer analytics and tools for data science. Slides, syllabi, and student evaluations are available on my #link("https://dyavorsky.github.io/teaching")[`website`].
+  - Developed and teach masters-level (MFE and MSBA) courses in econometrics, R programming, and marketing analytics, as well as undergraduate courses in customer analytics and tools for data science. 
+  - Slides, syllabi, and student evaluations are available on my #link("https://dyavorsky.github.io/teaching")[`website`].
 ]
 ```
 
