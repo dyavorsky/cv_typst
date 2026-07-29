@@ -385,6 +385,7 @@
       "Tableau",
       "Quarto",
       "LaTeX",
+      "Git",
     ),
     "Developing": (
       "Python",
