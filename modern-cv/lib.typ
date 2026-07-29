@@ -579,7 +579,7 @@
           // by the `place`, so this only affects text inside it.
           #set align(left)
           // Set explicitly rather than inherited: the document sets
-          // `justify: true`, which at a 2.1in measure produces rivers, and
+          // `justify: true`, which at a 2.3in measure produces rivers, and
           // hyphenation follows justification — which would hyphenate
           // "danyavorsky.com".
           #set text(size: 9pt, hyphenate: false)
@@ -953,12 +953,12 @@
 
 // ---- LOCAL EDIT (addition — not upstream): right sidebar content helpers -----
 //
-// These exist because the main-column helpers do NOT survive the sidebar's 2.1in
+// These exist because the main-column helpers do NOT survive the sidebar's 2.3in
 // measure — this is a restyle, not a move:
 //   * `edu-entry` above is `grid(columns: (1fr, auto))` with the year right-
 //     aligned on the same line. "PhD, Quantitative Marketing" + "UCLA Anderson"
-//     + "2020" cannot share a 151pt line.
-//   * `resume-skill-grid` has an `auto` label column; at 151pt the label
+//     + "2020" cannot share a 166pt line.
+//   * `resume-skill-grid` has an `auto` label column; at 166pt the label
 //     "Languages & Tools" claims most of the width and the values collapse.
 // Both sidebar variants therefore STACK rather than justify across a row.
 
@@ -966,7 +966,7 @@
 ///
 /// Deliberately NOT the level-1 `heading` show rule, which is 13pt, accent-
 /// colored, ends in a `1fr` rule, and is wrapped in `block(sticky: true)` — all
-/// wrong at 2.1in, and `sticky` is meaningless for content that is placed out of
+/// wrong at 2.3in, and `sticky` is meaningless for content that is placed out of
 /// the flow anyway.
 ///
 /// `above: 2.2em` is what separates the sidebar's sections; it is the one knob for
@@ -1016,7 +1016,7 @@
 /// Same dictionary shape as `sidebar-skill-list` — bold group label, then the
 /// values — but each item gets its own block instead of being comma-joined.
 /// Skill names are short enough to run together on a line; publication titles are
-/// not. At the sidebar's 1.8in measure a comma-joined title list wraps into an
+/// not. At the sidebar's 2.3in measure a comma-joined title list wraps into an
 /// unreadable run-on where the end of one title and the start of the next are
 /// indistinguishable.
 ///

@@ -90,11 +90,11 @@ Not upstream at all; defined here so `resume.qmd` stays content-only.
 | `__collect_contact_specs` | the contact cascade as plain data, shared by both renderers. |
 | `__format_contact_column` | contact items as a vertical icon+text grid for the sidebar. |
 
-**Unused as of now:** upstream's `resume-entry` and `github-link`, plus the local
-`edu-entry` and `pub-entry`. The main column carries only Experience and Teaching (both
-`job-entry`); Education and Publications moved into the sidebar, which needs the stacked
-variants instead. All four are left in place as starting points if a main-column entry
-style is wanted again.
+**Unused as of now:** upstream's `resume-entry`, `github-link`, `resume-skill-grid` and
+`resume-skill-item`, plus the local `edu-entry` and `pub-entry`. The main column carries
+only Experience and Teaching (both `job-entry`); Education, Publications and Skills all
+moved into the sidebar, which needs the stacked variants instead. All are left in place as
+starting points if a main-column entry style is wanted again.
 
 ### The right sidebar
 
@@ -177,7 +177,7 @@ drawn on **every** page (a narrow column beside an unexplained 3.25in of white r
 bug; beside the band it reads as the design) while the sidebar *content* is gated to page
 1 with `context here().page() == 1`.
 
-`edu-entry` and `resume-skill-grid` are **unusable** at 2.1in — the first right-aligns the
+`edu-entry` and `resume-skill-grid` are **unusable** at 2.3in — the first right-aligns the
 year on the degree line, the second gives an `auto` label column that "Languages & Tools"
 would monopolise. The `sidebar-*` variants stack instead. This is required scope, not a
 stylistic preference.
@@ -236,5 +236,5 @@ refactor (`__collect_contact_specs` / `__format_contact_column`). `resume.qmd` a
 Re-derive the right margin from the sidebar geometry rather than copying a number, and
 re-verify the full bleed.
 
-Then render and confirm the CV is still two pages (see CLAUDE.md, "Verifying a
-render").
+Then render and confirm the CV is still one page, and that the sidebar has not grown into
+the `Last Updated` stamp (see CLAUDE.md, "Verifying a render").
