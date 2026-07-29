@@ -84,6 +84,7 @@ to adjust appearance; change the value in the template instead. See CLAUDE.md,
       "Tableau",
       "Quarto",
       "LaTeX",
+      "Git",
     ),
     "Developing": (
       "Python",

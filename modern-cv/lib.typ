@@ -817,6 +817,9 @@
   // document value, giving wrapped bullets slightly more air. Change it HERE to
   // retighten bullets — the document-level value cannot reach them.
   set par(leading: 0.65em)
+  // LOCAL EDIT: upstream left Typst's default round `•`. U+2023 TRIANGULAR
+  // BULLET. Revert by deleting this line.
+  set list(marker: [‣])
   block(above: 0.5em)[
     #body
   ]
